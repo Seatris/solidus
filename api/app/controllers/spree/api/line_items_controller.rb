@@ -16,7 +16,16 @@ module Spree
             stock_location_quantities: params[:line_item][:stock_location_quantities]
           }.merge({ options: line_item_params[:options].to_h })
         )
-
+        ####
+        if variant.subscribable
+          SolidusSubscriptions::LineItem.create!(
+            interval_units: params[:interval_units] || 'month',
+            start_date: params[:start_date],
+            end_date: params[:end_date],
+            spree_line_item: @line_item
+          )
+        end
+        ###
         if @line_item.errors.empty?
           respond_with(@line_item, status: 201, default_template: :show)
         else
