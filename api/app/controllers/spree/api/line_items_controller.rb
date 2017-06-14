@@ -20,6 +20,9 @@ module Spree
         if variant.subscribable
           SolidusSubscriptions::LineItem.create!(
             interval_units: params[:interval_units] || 'month',
+            interval_length: 1,
+            subscribable_id: variant.id,
+            quantity: @line_item.quantity,
             start_date: params[:start_date],
             end_date: params[:end_date],
             spree_line_item: @line_item
