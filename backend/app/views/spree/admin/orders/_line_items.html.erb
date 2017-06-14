@@ -1,7 +1,9 @@
 <table class="line-items index" data-hook="line-items">
   <colgroup>
     <col style="width: 10%;" />
-    <col style="width: 45%;" />
+    <col style="width: 25%;" />
+    <col style="width: 10%;" />
+    <col style="width: 10%;" />
     <col style="width: 10%;" />
     <col style="width: 10%;" />
     <col style="width: 10%;" />
@@ -13,6 +15,9 @@
       <th colspan="2"><%= Spree::Product.human_attribute_name(:name) %></th>
       <th><%= Spree::LineItem.human_attribute_name(:price) %></th>
       <th><%= Spree::LineItem.human_attribute_name(:quantity) %></th>
+      <th><%= Spree::LineItem.human_attribute_name(:interval_unit) %></th>
+      <th><%= Spree::LineItem.human_attribute_name(:variant_start_date) %></th>
+      <th><%= Spree::LineItem.human_attribute_name(:variant_end_date) %></th>
       <th><%= Spree::LineItem.human_attribute_name(:total) %></th>
       <th class="orders-actions actions" data-hook="admin_order_form_line_items_header_actions">&nbsp;</th>
     </tr>

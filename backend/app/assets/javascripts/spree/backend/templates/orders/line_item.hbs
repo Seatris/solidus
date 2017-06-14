@@ -21,9 +21,30 @@
   <td class="line-item-qty-edit">
     <input type="number" name="quantity" value="{{ line_item.quantity }}" min="0" class="line_item_quantity" size="5">
   </td>
+  <td class="line-item-interval-edit">
+    <select name="interval_units">
+      <option value="month">Month</option>
+      <option value="year">Year</option>
+    </select>
+  </td>
+  <td class="line-item-start-date">
+    <input type="date" name="start_date" value="{{ line_item.start_date }}" class="line_item_start_date">
+  </td>
+  <td class="line-item-end-date">
+    <input type="date" name="end_date" value="{{ line_item.end_date }}" class="line_item_end_date">
+  </td>
 {{else}}
   <td class="line-item-qty-show align-center">
     {{ line_item.quantity }}
+  </td>
+  <td class="line-item-interval-show align-center">
+    {{ line_item.interval_units }}
+  </td>
+  <td class="line-item-start_date-show align-center">
+    {{ line_item.start_date }}
+  </td>
+  <td class="line-item-end_date-show align-center">
+    {{ line_item.end_date }}
   </td>
 {{/if}}
 <td class="line-item-total align-center">

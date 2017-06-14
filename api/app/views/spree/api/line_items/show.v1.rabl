@@ -13,3 +13,8 @@ end
 child :adjustments => :adjustments do
   extends "spree/api/adjustments/show"
 end
+
+child :subscription_line_items => :subscription_line_items do
+  attributes :interval_units, :start_date, :end_date
+  node(:next_due_date) { |sl| sl.subscription.actionable_date rescue "" }
+end
