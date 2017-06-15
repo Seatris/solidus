@@ -16,5 +16,5 @@ end
 
 child :subscription_line_items => :subscription_line_items do
   attributes :interval_units, :start_date, :end_date
-  node(:next_due_date) { |sl| sl.subscription.actionable_date rescue "" }
+  node(:next_due_date) { |sl| sl.subscription.try(:next_due_date) || '' }
 end
