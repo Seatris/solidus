@@ -52,6 +52,60 @@
       </div>
     <% end %>
 
+    <%= f.field_container :duns do %>
+      <%= f.label :duns %>
+      <% if can?(:update_email, @user) %>
+        <%= f.text_field :duns, class: 'fullwidth' %>
+      <% else %>
+        <span title="<%= Spree.t(:cannot_update_email) %>" class="fa fa-question-circle icon_link no-text with-tip"></span>
+        <%= f.text_field :duns, class: 'fullwidth', disabled: true %>
+      <% end %>
+      <%= error_message_on :user, :duns %>
+    <% end %>
+
+    <%= f.field_container :vat do %>
+      <%= f.label :vat %>
+      <% if can?(:update_email, @user) %>
+        <%= f.text_field :vat, class: 'fullwidth' %>
+      <% else %>
+        <span title="<%= Spree.t(:cannot_update_email) %>" class="fa fa-question-circle icon_link no-text with-tip"></span>
+        <%= f.text_field :vat, class: 'fullwidth', disabled: true %>
+      <% end %>
+      <%= error_message_on :user, :vat %>
+    <% end %>
+
+    <%= f.field_container :legal_representative do %>
+      <%= f.label :legal_representative %>
+      <% if can?(:update_email, @user) %>
+        <%= f.text_field :legal_representative, class: 'fullwidth' %>
+      <% else %>
+        <span title="<%= Spree.t(:cannot_update_email) %>" class="fa fa-question-circle icon_link no-text with-tip"></span>
+        <%= f.text_field :legal_representative, class: 'fullwidth', disabled: true %>
+      <% end %>
+      <%= error_message_on :user, :legal_representative %>
+    <% end %>
+
+    <%= f.field_container :company do %>
+      <%= f.label :company %>
+      <% if can?(:update_email, @user) %>
+        <%= f.text_field :company, class: 'fullwidth' %>
+      <% else %>
+        <span title="<%= Spree.t(:cannot_update_email) %>" class="fa fa-question-circle icon_link no-text with-tip"></span>
+        <%= f.text_field :company, class: 'fullwidth', disabled: true %>
+      <% end %>
+      <%= error_message_on :user, :company %>
+    <% end %>
+
+    <%= f.field_container :account_name do %>
+      <%= f.label :account_name %>
+      <% if can?(:update_email, @user) %>
+        <%= f.text_field :account_name, class: 'fullwidth' %>
+      <% else %>
+        <span title="<%= Spree.t(:cannot_update_email) %>" class="fa fa-question-circle icon_link no-text with-tip"></span>
+        <%= f.text_field :account_name, class: 'fullwidth', disabled: true %>
+      <% end %>
+      <%= error_message_on :user, :account_name %>
+    <% end %>
   </div>
 
   <div data-hook="admin_user_form_password_fields" class="col-6">
