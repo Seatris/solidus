@@ -2,7 +2,7 @@
   <tr>
     <td>
       <p class="lede">
-        <%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+        <%= Spree.t('order_mailer.confirm_email.dear_customer', customer: @order.user.try(:legal_representative) || 'Customer') %>
       </p>
       <p>
         <%= Spree.t('order_mailer.confirm_email.instructions') %>

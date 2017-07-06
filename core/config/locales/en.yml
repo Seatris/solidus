@@ -1555,9 +1555,9 @@ en:
         subtotal: ! 'Subtotal:'
         total: ! 'Order Total:'
       confirm_email:
-        dear_customer: Dear Customer,
-        instructions: Please review and retain the following order information for your records.
-        order_summary: Order Summary
+        dear_customer: Dear %{customer},
+        instructions: thank you for subscribing to the Seatris Restaurant Management Software.
+        order_summary: 'Your order summary:'
         subject: Order Confirmation
         subtotal: ! 'Subtotal:'
         thanks: Thank you for your business.
