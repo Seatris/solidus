@@ -16,10 +16,16 @@
             <td><%= item.variant.sku %></td>
             <td>
               <%= raw(item.variant.product.name) %>
-              <%= raw(item.variant.product.description) -%>
+              <%= raw(item.variant.options_text) -%>
             </td>
             <!--td(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td-->
             <td><%= item.display_amount %></td>
+          </tr>
+          <tr>
+            <td colpan="2">
+              <%= raw(item.variant.product.description) -%>
+            </td>
+            <td></td>
           </tr>
         <% end %>
         <tr>
