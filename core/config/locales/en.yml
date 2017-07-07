@@ -1268,7 +1268,7 @@ en:
         tax_category: "This determines what kind of taxation is applied to this product.<br/> Default: None"
       spree/promotion:
         starts_at: "This determines when the promotion can be applied to orders. <br/> If no value is specified, the promotion will be immediately available."
-        expires_at: "This determines when the promotion expires. <br/> If no value is specified, the promotion will never expires."
+        expires_at: "This determines when the promotion expires. <br/> If no value is specified, the promotion will never expire."
       spree/store:
         cart_tax_country_iso: "This determines which country is used for taxes on carts (orders which don't yet have an address).<br/> Default: None."
       spree/variant:
@@ -1364,7 +1364,7 @@ en:
     inventory: Inventory
     inventory_adjustment: Inventory Adjustment
     inventory_canceled: Inventory canceled
-    inventory_error_flash_for_insufficient_quantity: "#{names} became unavailable."
+    inventory_error_flash_for_insufficient_quantity: "%{names} became unavailable."
     inventory_not_available: Inventory not available for %{item}.
     inventory_state: Inventory State
     inventory_states:
@@ -1555,12 +1555,12 @@ en:
         subtotal: ! 'Subtotal:'
         total: ! 'Order Total:'
       confirm_email:
-        dear_customer: Dear %{customer},
-        instructions: thank you for subscribing to the Seatris Restaurant Management Software.
-        order_summary: 'Your order summary:'
+        dear_customer: Dear Customer,
+        instructions: Please review and retain the following order information for your records.
+        order_summary: Order Summary
         subject: Order Confirmation
         subtotal: ! 'Subtotal:'
-        thanks: Thank you for your order.
+        thanks: Thank you for your business.
         total: ! 'Order Total:'
       inventory_cancellation:
         dear_customer: Dear Customer,
@@ -1872,6 +1872,7 @@ en:
     source_location: Source location
     special_instructions: Special Instructions
     split: Split
+    split_failed: Unable to complete split
     spree_gateway_error_flash_for_checkout: There was a problem with your payment information. Please check your information and try again.
     ssl:
       change_protocol: "Please switch to using HTTP (rather than HTTPS) and retry this request."
