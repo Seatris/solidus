@@ -1560,7 +1560,7 @@ en:
         order_summary: 'Your order summary:'
         subject: Order Confirmation
         subtotal: ! 'Subtotal:'
-        thanks: Thank you for your business.
+        thanks: Thank you for your order.
         total: ! 'Order Total:'
       inventory_cancellation:
         dear_customer: Dear Customer,
