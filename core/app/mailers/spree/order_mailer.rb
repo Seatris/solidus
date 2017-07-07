@@ -28,7 +28,12 @@ module Spree
 
     def build_subject(subject_text, resend)
       resend_text = (resend ? "[#{Spree.t(:resend).upcase}] " : '')
-      "#{resend_text}#{@order.store.name} #{subject_text} ##{@order.number}"
+      # FIXME hard coded subject!!!! how to differentiate??
+      if false
+        "#{resend_text}#{@order.store.name} #{subject_text} ##{@order.number}"
+      else
+        "#{subject_text} Seatris Subscription"
+      end
     end
   end
 end
